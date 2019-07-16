@@ -166,6 +166,10 @@ Write a regex that matches a `1`, followed by 0 or more `2`s, followed by 0-1 `3
 Write a regex that matches any one or two digit number, followed by a space,
 followed by the word `monkey`, followed by 0 or 1 `s`s.
 
+```js
+/\d{1,2}\s\bmonkeys?/;
+```
+
 ### Convert Regex to State Machine Diagram
 
 Draw a state machine diagram for the following regex that matches a clock time.
