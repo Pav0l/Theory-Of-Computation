@@ -18,8 +18,8 @@ with open(filename, encoding="utf8") as so:
 # Set up regex
 links = r"(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?"
 
-# TODO Find links using regex, save in list called 'matches'
-
+# Find links using regex, save in list called 'matches'
+matches = re.findall(links, data)
 
 # Check matches, print results
 # TODO Read in links from answers.txt (hint...this is a CSV file),
