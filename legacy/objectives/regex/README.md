@@ -5,8 +5,8 @@ A _regular expression_ is a sequence of characters that define a search pattern.
 In common daily usage, regular expressions (often called _regexes_) are used to
 match patterns in strings of characters.
 
-* [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
-* [Regexr regular expression tester](https://regexr.com/)
+- [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
+- [Regexr regular expression tester](https://regexr.com/)
 
 ## Example Regular Expressions
 
@@ -92,20 +92,19 @@ Where does the regex fail us?
 
 All of the following are valid email addresses. How does our regex fail to detect them?
 
-* Name@example.com
-* name22@example.com
-* name+2_3@example.com
-* name(goats)@example.com
-* (goats)name@example.com
+- Name@example.com
+- name22@example.com
+- name+2_3@example.com
+- name(goats)@example.com
+- (goats)name@example.com
 
 All of the following are invalid email addresses. Why does our regex say they're OK?
 
-* name@example.com.
-* name@example..com
-* name@example..
+- name@example.com.
+- name@example..com
+- name@example..
 
 How could it be improved to handle these cases? Writing an email regex is hard.
-
 
 ### Greedy versus Non-Greedy
 
@@ -152,15 +151,14 @@ foo+d    matches food foood foooood etc.
 
 Notice how the `+` in the regex forms a loop in the state machine diagram
 
-
 ## Exercises
 
 ### Write a Regular Expression
 
 Write a regex that matches a `1`, followed by 0 or more `2`s, followed by 0-1 `3`s.
 
-```
-12*3?
+```js
+/12*3?/;
 ```
 
 ### Write a Regular Expression
@@ -168,6 +166,9 @@ Write a regex that matches a `1`, followed by 0 or more `2`s, followed by 0-1 `3
 Write a regex that matches any one or two digit number, followed by a space,
 followed by the word `monkey`, followed by 0 or 1 `s`s.
 
+```js
+/\d{1,2}\s\bmonkeys?/;
+```
 
 ### Convert Regex to State Machine Diagram
 
