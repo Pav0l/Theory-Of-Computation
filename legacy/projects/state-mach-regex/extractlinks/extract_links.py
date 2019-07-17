@@ -15,8 +15,8 @@ with open(filename, encoding="utf8") as so:
     data = so.read()
 
 
-# TODO Set up regex
-
+# Set up regex
+links = r"(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?"
 
 # TODO Find links using regex, save in list called 'matches'
 
