@@ -16,7 +16,7 @@ with open(filename, encoding="utf8") as so:
 
 
 # Set up regex
-links = r"(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?"
+links = r"\b(https?:\/\/[A-z0-9.-]+[.][#@&%sA;-z0-9./?=~-]+)"
 
 # Find links using regex, save in list called 'matches'
 matches = re.findall(links, data)
@@ -24,6 +24,9 @@ matches = re.findall(links, data)
 # Check matches, print results
 # TODO Read in links from answers.txt (hint...this is a CSV file),
 # save in list called 'answer_data'
+with open('./answers.txt', encoding="utf8") as so:
+    answers = so.read().split(',')
+    answer_data = [ans.replace('"', '') for ans in answers]
 
 
 # Compare answers with matches found using regex, print out any mismatches
